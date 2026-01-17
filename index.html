@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pink Haven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top">
+    <h1>Pink Haven 🌸</h1>
+  </div>
+
+  <div class="content">
+    <h2>Welcome to Pink Haven</h2>
+    <p>Send a message to the owner:</p>
+
+    <form id="messageForm">
+      <input type="text" id="name" placeholder="Your name" required>
+      <textarea id="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+    <div id="confirmation"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById("messageForm");
+    const confirmation = document.getElementById("confirmation");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      confirmation.innerText = "Message sent! (This is a demo. Messages are not stored yet.)";
+    });
+  </script>
+</body>
+</html>
